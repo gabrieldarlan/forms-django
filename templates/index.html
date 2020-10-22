@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block content%}
+<section class="col-8">
+    <form action="{% url 'minha_consulta'%}" method="POST">
+        {%csrf_token%}
+        {{form}}
+        <input type="submit" value="Ok" class="btn btn-success">
+    </form>
+</section>
+{%endblock%}
